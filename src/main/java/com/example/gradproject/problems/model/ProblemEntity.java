@@ -1,7 +1,6 @@
 package com.example.gradproject.problems.model;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +9,7 @@ import javax.persistence.Table;
 import javax.persistence.Index;
 
 @Entity
-@Table(name = "problem", indexes = {
+@Table(name = "problems", indexes = {
 	@Index(name = "idx_heading", columnList = "heading")
 })
 
@@ -21,7 +20,7 @@ public class ProblemEntity {
 	private String heading;
     private String description;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated
     private DifficultyEnum difficulty;
     
     private Long upvotes;

@@ -1,11 +1,18 @@
 package com.example.gradproject.problems.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "testcases", indexes = {
+	@Index(name = "idx_problem_id", columnList = "problem_id")
+})
 public class TestcaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +23,7 @@ public class TestcaseEntity {
     private String explanation;
 
     @ManyToOne
-    @JoinColumn(name = "problem_id")
+    @JoinColumn(name = "problem_id", referencedColumnName="id", nullable=false)
     private ProblemEntity problem;
 
 	public String getInput() {
