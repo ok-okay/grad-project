@@ -1,24 +1,23 @@
 package com.example.gradproject.problems.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Index;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Index;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "problems", indexes = {
 	@Index(name = "idx_heading", columnList = "heading")
 })
-
 public class ProblemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	private String heading;
-    private String description;
+    private String question;
 
     @Enumerated
     private DifficultyEnum difficulty;
@@ -38,11 +37,11 @@ public class ProblemEntity {
 	public void setHeading(String heading) {
 		this.heading = heading;
 	}
-	public String getDescription() {
-		return description;
+	public String getQuestion() {
+		return question;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setQuestion(String question) {
+		this.question = question;
 	}
 	public DifficultyEnum getDifficulty() {
 		return difficulty;

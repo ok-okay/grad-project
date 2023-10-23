@@ -4,7 +4,7 @@ public class HintDTO {
     private byte id;
 
     private String hintDescription;
-    private Long problemId;
+    private Long problem_id;
 
 	public byte getId() {
 		return id;
@@ -18,10 +18,10 @@ public class HintDTO {
 	public void setHintDescription(String hintDescription) {
 		this.hintDescription = hintDescription;
 	}
-	public Long getProblemId() {
-		return problemId;
+	public Long getProblem_id() {
+		return problem_id;
 	}
-	public void setProblemId(Long problemId) {
-		this.problemId = problemId;
+	public void setProblem_id(Long problem_id) {
+		this.problem_id = problem_id;
 	}
 }

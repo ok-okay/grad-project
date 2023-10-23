@@ -6,7 +6,7 @@ public class TestcaseDTO {
     private String input;
     private String output;
     private String explanation;
-    private Long problemId;
+    private Long problem_id;
 
 	public byte getId() {
 		return id;
@@ -32,11 +32,11 @@ public class TestcaseDTO {
 	public void setExplanation(String explanation) {
 		this.explanation = explanation;
 	}
-	public Long getProblemId() {
-		return problemId;
+	public Long getProblem_id() {
+		return problem_id;
 	}
-	public void setProblemId(Long problemId) {
-		this.problemId = problemId;
+	public void setProblem_id(Long problem_id) {
+		this.problem_id = problem_id;
 	}
 
 }

@@ -3,7 +3,7 @@ package com.example.gradproject.problems.dto;
 public class ProblemDTO {
     private Long id;
 	private String heading;
-    private String description;
+    private String question;
 
     private DifficultyEnum difficulty;
     
@@ -13,6 +13,19 @@ public class ProblemDTO {
     private Long submissions;
     private Long accepted;
  
+	public ProblemDTO(Long id, String heading, String question, DifficultyEnum difficulty, Long upvotes, Long downvotes,
+			Long submissions, Long accepted) {
+		super();
+		this.id = id;
+		this.heading = heading;
+		this.question = question;
+		this.difficulty = difficulty;
+		this.upvotes = upvotes;
+		this.downvotes = downvotes;
+		this.submissions = submissions;
+		this.accepted = accepted;
+	}
+    
 	public Long getId() {
 		return id;
 	}
@@ -25,11 +38,11 @@ public class ProblemDTO {
 	public void setHeading(String heading) {
 		this.heading = heading;
 	}
-	public String getDescription() {
-		return description;
+	public String getQuestion() {
+		return question;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setQuestion(String question) {
+		this.question = question;
 	}
 	public DifficultyEnum getDifficulty() {
 		return difficulty;

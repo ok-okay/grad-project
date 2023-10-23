@@ -1,13 +1,13 @@
 package com.example.gradproject.problems.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Index;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Index;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "constraints", indexes = {
@@ -31,7 +31,7 @@ public class ConstraintEntity {
 	public void setConstraintDescription(String constraintDescription) {
 		this.constraintDescription = constraintDescription;
 	}
-
+//
 	public ProblemEntity getProblem() {
 		return problem;
 	}
