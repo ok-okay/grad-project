@@ -6,13 +6,6 @@ public class ConstraintDTO {
     private String constraintDescription;
     private Long problem_id;
 
-    public ConstraintDTO(byte id, String constraintDescription, Long problem_id) {
-		super();
-		this.id = id;
-		this.constraintDescription = constraintDescription;
-		this.problem_id = problem_id;
-	}
-
 	public byte getId() {
 		return id;
 	}

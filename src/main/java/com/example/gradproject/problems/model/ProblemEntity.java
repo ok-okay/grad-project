@@ -1,6 +1,8 @@
 package com.example.gradproject.problems.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,9 +19,12 @@ public class ProblemEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	private String heading;
+	private String url;
+	
+	@Column(columnDefinition="TEXT", length = 2000)
     private String question;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private DifficultyEnum difficulty;
     
     private Long upvotes;
@@ -36,6 +41,12 @@ public class ProblemEntity {
 	}
 	public void setHeading(String heading) {
 		this.heading = heading;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
 	}
 	public String getQuestion() {
 		return question;
